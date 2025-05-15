@@ -1,29 +1,29 @@
 {
   "name": "react-native-calendars",
   "version": "1.22.0",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/index.d.ts",
   "description": "React Native Calendar Components",
-"scripts": {
-  "build": "yarn build:ts && yarn build:docs",
-  "build:ts": "tsc",
-  "build:dev": "tsc --noEmit",
-  "build:docs": "node ./scripts/build-docs.js",
-  "e2e": "node ./scripts/test-e2e.js --release",
-  "test": "yarn lint && yarn unit",
-  "test:watch": "jest --watch",
-  "test:perf": "TEST_RUNNER_ARGS='--testMatch **/*.perf.js' reassure measure",
-  "unit": "jest",
-  "lint": "eslint src/ example/src --ext .tsx,.ts,.js",
-  "release": "node ./scripts/release.js",
-  "start": "react-native start",
-  "ios": "react-native run-ios",
-  "android": "react-native run-android",
-  "xcode": "open ios/CalendarsExample.xcworkspace/",
-  "clean": "rm yarn-lock && rm -rf ./node_modules && yarn",
-  "pod-install": "pod install --project-directory=ios",
-  "prepare": "yarn build"
-},
+  "scripts": {
+    "build": "yarn build:tsc && yarn build:docs",
+    "build:ts": "tsc",
+    "build:dev": "tsc --noEmit",
+    "build:docs": "node ./scripts/build-docs.js",
+    "e2e": "node ./scripts/test-e2e.js --release",
+    "test": "yarn lint && yarn unit",
+    "test:watch": "jest --watch",
+    "test:perf": "TEST_RUNNER_ARGS='--testMatch **/*.perf.js' reassure measure",
+    "unit": "jest",
+    "lint": "eslint src/ example/src --ext .tsx,.ts,.js",
+    "release": "node ./scripts/release.js",
+    "start": "react-native start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "xcode": "open ios/CalendarsExample.xcworkspace/",
+    "clean": "rm yarn-lock && rm -rf ./node_modules && yarn",
+    "pod-install": "pod install --project-directory=ios",
+    "prepare": "yarn build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wix/react-native-calendars"
@@ -31,11 +31,6 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "files": [
-  "lib/**/*",
-  "README.md",
-  "LICENSE"
-],
   "author": "Wix.com",
   "license": "MIT",
   "dependencies": {
